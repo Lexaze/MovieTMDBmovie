@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SlideShow from "../SlideShow/SlideShow";
 import styles from "./DisplayRow.module.css";
-import { movies } from "../../Data/Data";
 import { movieInstance } from "../../Utility/MovieInstance";
 import requests from "../../Utility/MovieRequestingUrl";
 

@@ -162,10 +162,8 @@ This project was created to practice:
 
 ## 📸 Preview
 
-Add a screenshot of your project here:
-
 ```markdown
-![Netflix Clone](./src/assets/image/NetFlix_Screenshot.png)
+![Home Page Screenshot](./src/assets/image/NetFlix_Screenshot.png)
 ```
 
 ## ⚠️ Disclaimer

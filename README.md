@@ -163,7 +163,7 @@ This project was created to practice:
 ## 📸 Preview
 
 ```markdown
-![Home Page Screenshot](src/assets/image/NetFlix_Screenshot.png)
+![Home Page Screenshot](https://raw.githubusercontent.com/Lexaze/netflix-clone/main/src/assets/image/NetFlix_Screenshot.png)
 ```
 
 ## ⚠️ Disclaimer

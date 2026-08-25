@@ -1,0 +1,184 @@
+/* Footer */
+
+.footer {
+  width: 100%;
+  background-color: #141414;
+  color: #808080;
+}
+
+/* 
+  Main Footer Container
+  Keeps the content centered like Netflix.
+ */
+
+.footerContainer {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 60px 0 25px;
+}
+
+/* 
+  Social Media Icons
+ */
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 25px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  font-size: 20px;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.socialLink:hover {
+  color: #b3b3b3;
+  transform: translateY(-2px);
+}
+
+.socialLink:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+/* 
+  Footer Navigation
+
+  Four columns on desktop.
+ */
+
+.footerNav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 40px;
+}
+
+/*
+  Individual Column
+ */
+
+.footerColumn {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 
+  Footer Links
+ */
+
+.footerColumn li {
+  margin-bottom: 18px;
+}
+
+.footerLink {
+  color: #808080;
+  font-size: 13px;
+  line-height: 1.4;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.footerLink:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footerLink:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* 
+  Copyright
+ */
+
+.copyright {
+  margin: 15px 0 0;
+
+  color: #808080;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* 
+  Tablet
+*/
+
+@media (max-width: 768px) {
+  .footerContainer {
+    width: 100%;
+    padding-top: 45px;
+  }
+
+  .footerNav {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 10px;
+  }
+
+  .socialLinks {
+    gap: 22px;
+  }
+
+  .socialLink {
+    font-size: 19px;
+  }
+}
+
+/* 
+  Mobile
+ */
+
+@media (max-width: 480px) {
+  .footerContainer {
+    width: 85%;
+    padding: 40px 0 25px;
+  }
+
+  .socialLinks {
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .socialLink {
+    font-size: 18px;
+  }
+
+  .footerNav {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+  }
+
+  .footerColumn {
+    margin-bottom: 0;
+  }
+
+  .footerColumn li {
+    margin-bottom: 16px;
+  }
+
+  .footerLink {
+    font-size: 13px;
+  }
+
+  .copyright {
+    margin-top: 20px;
+    font-size: 11px;
+  }
+}

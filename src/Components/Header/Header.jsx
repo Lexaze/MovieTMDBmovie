@@ -1,12 +1,17 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import logo from "../../assets/image/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Search, Bell, User, ChevronDown } from "lucide-react";
+import { useAuth } from "../../Context/useAuth";
 import styles from "./Header.module.css";
 
 function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [openProfilePath, setOpenProfilePath] = useState(null);
+  const { user, signOut } = useAuth();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isProfileOpen = openProfilePath === location.pathname;
 
   //for blur effect on scroll
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,11 +31,19 @@ function Header() {
     };
   }, []);
 
+  const handleSignOut = () => {
+    setOpenProfilePath(null);
+    signOut();
+    navigate("/signin", { replace: true });
+  };
+
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
         {/* logo here */}
-        <img className={styles.logo} src={logo} alt="Logo" />
+        <Link to="/" aria-label="Netflix home">
+          <img className={styles.logo} src={logo} alt="Netflix" />
+        </Link>
         {/* navigation links */}
         <nav className={styles.nav}>
           <Link className={styles.navLink} to="/">
@@ -81,8 +94,10 @@ function Header() {
           {/* User Profile */}
           <div className={styles.profileContainer}>
             <button
-              onClick={() => setIsProfileOpen(!isProfileOpen)}
+              onClick={() => setOpenProfilePath(isProfileOpen ? null : location.pathname)}
               className={styles.profileButton}
+              aria-label="Open profile menu"
+              aria-expanded={isProfileOpen}
             >
               <div className={styles.profileAvatar}>
                 <User size={20} />
@@ -91,17 +106,28 @@ function Header() {
               <ChevronDown size={20} />
             </button>
             {isProfileOpen && (
-              <div className={styles.profileMenu}>
-                <Link className={styles.profileMenuItem} to="/account">
-                  Account
-                </Link>
+              <div className={styles.profileMenu} role="menu">
+                {user ? (
+                  <>
+                    <Link className={styles.profileMenuItem} to="/account" role="menuitem">
+                      Account
+                    </Link>
+                    <button
+                      className={styles.profileMenuItem}
+                      onClick={handleSignOut}
+                      role="menuitem"
+                    >
+                      Sign Out
+                    </button>
+                  </>
+                ) : (
+                  <Link className={styles.profileMenuItem} to="/signin" role="menuitem">
+                    Sign In
+                  </Link>
+                )}
                 <Link className={styles.profileMenuItem} to="/help center">
                   Help Center
                 </Link>
-                <hr className={styles.profileMenuDivider} />
-                <button className={styles.profileMenuItem} to="/Signout">
-                  Sign Out
-                </button>
               </div>
             )}
           </div>

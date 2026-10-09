@@ -23,6 +23,7 @@ This project recreates the main visual structure of Netflix while practicing reu
 * Movie cards
 * Image slideshow
 * Navigation header
+* Demo sign-in, account page, and sign-out
 * Netflix-style footer
 * Social media icons
 * Component-based folder structure
@@ -68,6 +69,14 @@ NETFLIX/
 ### Header
 
 Contains the main navigation and Netflix-style header elements.
+
+### Demo account flow
+
+Use the profile menu to open the sign-in page. The demo accepts any valid email
+and a non-empty password; only the email is saved in browser local storage. This
+is a frontend demonstration and does not authenticate against a backend.
+Signed-in users can view `/account` and sign out from either the account page or
+the profile menu.
 
 ### Banner
 

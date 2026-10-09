@@ -153,9 +153,7 @@ This application was engineered completely from scratch as an educational practi
 
 ## 📸 Preview
 
-```markdown
-![Home Page Screenshot](src/assets/image/StreamHub_Screenshot.png)
-```
+![Home Page Screenshot](./src/assets/image/StreamHub_Screenshot.png)
 
 ## ⚠️ Disclaimer
 

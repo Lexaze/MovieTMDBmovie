@@ -41,8 +41,8 @@ function Header() {
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.container}>
         {/* logo here */}
-        <Link to="/" aria-label="Netflix home">
-          <img className={styles.logo} src={logo} alt="Netflix" />
+        <Link to="/" aria-label="StreamHub home">
+          <img className={styles.logo} src={logo} alt="StreamHub" />
         </Link>
         {/* navigation links */}
         <nav className={styles.nav}>
@@ -94,7 +94,9 @@ function Header() {
           {/* User Profile */}
           <div className={styles.profileContainer}>
             <button
-              onClick={() => setOpenProfilePath(isProfileOpen ? null : location.pathname)}
+              onClick={() =>
+                setOpenProfilePath(isProfileOpen ? null : location.pathname)
+              }
               className={styles.profileButton}
               aria-label="Open profile menu"
               aria-expanded={isProfileOpen}
@@ -109,7 +111,11 @@ function Header() {
               <div className={styles.profileMenu} role="menu">
                 {user ? (
                   <>
-                    <Link className={styles.profileMenuItem} to="/account" role="menuitem">
+                    <Link
+                      className={styles.profileMenuItem}
+                      to="/account"
+                      role="menuitem"
+                    >
                       Account
                     </Link>
                     <button
@@ -121,7 +127,11 @@ function Header() {
                     </button>
                   </>
                 ) : (
-                  <Link className={styles.profileMenuItem} to="/signin" role="menuitem">
+                  <Link
+                    className={styles.profileMenuItem}
+                    to="/signin"
+                    role="menuitem"
+                  >
                     Sign In
                   </Link>
                 )}

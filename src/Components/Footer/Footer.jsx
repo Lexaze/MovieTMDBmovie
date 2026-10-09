@@ -71,7 +71,9 @@ function Footer() {
         </nav>
 
         {/*Copyright */}
-        <p className={styles.copyright}>© 1997-2026 Netflix, Inc.</p>
+        <p className={styles.copyright}>
+          © 1997-2026 Educational Portfolio Project
+        </p>
       </div>
     </footer>
   );

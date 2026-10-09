@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Play, Info } from "lucide-react";
-import NetflixBannerLogo from "../../assets/image/logo.png";
+import StreamHubBannerLogo from "../../assets/image/logo.png";
 import styles from "./Banner.module.css";
 import { movieInstance } from "../../Utility/MovieInstance";
 import requests from "../../Utility/MovieRequestingUrl";
@@ -10,7 +10,7 @@ function Banner() {
   const [bannerImage, setBannerImage] = useState({});
   useEffect(() => {
     async function fetchBannerImage() {
-      const request = await movieInstance.get(requests.fetchNetflixOriginals);
+      const request = await movieInstance.get(requests.fetchFeaturedOriginals);
       setBannerImage(
         request.data.results[
           Math.floor(Math.random() * request.data.results.length)
@@ -33,8 +33,8 @@ function Banner() {
       }}
     >
       <div className={styles.contents}>
-        {/* netflix image */}
-        <img className={styles.logoImg} src={NetflixBannerLogo} alt="Netflix" />
+        {/* streamhub image */}
+        <img className={styles.logoImg} src={StreamHubBannerLogo} alt="StreamHub" />
 
         {/* title */}
         <h1 className={styles.title}>

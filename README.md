@@ -1,9 +1,9 @@
-# 🎬 Netflix Clone
+# 🎬 StreamHub - Movie & TV Show Discovery App
 
-A Netflix-inspired web application built with **React JSX** and **Vite**.
-This project recreates the main visual structure of Netflix while practicing reusable React components, responsive design, CSS styling, and component-based development.
+A modern entertainment discovery web application built with **React JSX** and **Vite**.
+This project replicates the structure of a streaming platform interface while focusing on reusable React components, responsive design, CSS styling, and component-based organization.
 
-##  Technologies Used
+## 🚀 Technologies Used
 
 * React.js
 * JSX
@@ -13,25 +13,25 @@ This project recreates the main visual structure of Netflix while practicing reu
 * JavaScript
 * ESLint
 
-##  Features
+## ✨ Features
 
-* Netflix-inspired user interface
-* Responsive design
+* StreamHub interface design
+* Fully responsive layout
 * Reusable React components
-* Hero/Banner section
-* Movie display rows
-* Movie cards
-* Image slideshow
-* Navigation header
-* Demo sign-in, account page, and sign-out
-* Netflix-style footer
-* Social media icons
-* Component-based folder structure
+* Hero/Banner media section
+* Horizontal movie display rows
+* Interactive movie and show cards
+* Featured image slideshow
+* Dynamic navigation header
+* Simulated demo sign-in, account page, and sign-out dashboard
+* Comprehensive platform-style footer
+* Social media connectivity integrations
+* Clean, component-based folder structure
 
 ## 📁 Project Structure
 
 ```text
-NETFLIX/
+STREAMHUB/
 │
 ├── public/
 ├── Resources/
@@ -67,36 +67,25 @@ NETFLIX/
 ## 🧩 Main Components
 
 ### Header
+Contains the main navigation menu and StreamHub branding layout.
 
-Contains the main navigation and Netflix-style header elements.
-
-### Demo account flow
-
-Use the profile menu to open the sign-in page. The demo accepts any valid email
-and a non-empty password; only the email is saved in browser local storage. This
-is a frontend demonstration and does not authenticate against a backend.
-Signed-in users can view `/account` and sign out from either the account page or
-the profile menu.
+### Demo Account Flow
+Use the profile menu to access the mock sign-in form. The demo accepts any valid email formatting and a non-empty password. For safety and compliance, user data is only simulated in the browser's local storage. This is exclusively a frontend demonstration and does not communicate with or process data against an actual backend server. Authenticated demo users can access the `/account` route and trigger the sign-out action at any time.
 
 ### Banner
-
-Displays the main featured content/hero section.
+Displays the primary featured title and hero display showcase.
 
 ### DisplayRow
-
-Displays groups of movies or shows in horizontal rows.
+Arranges collections of entertainment media content into smooth, horizontal scrolling rows.
 
 ### MovieCard
-
-Reusable component for displaying individual movie/show information.
+A flexible component architecture optimized for displaying standalone poster assets and contextual title information.
 
 ### SlideShow
-
-Handles the slideshow/carousel section of the application.
+Manages the carousel logic and transitional mechanics for the application's top featured banners.
 
 ### Footer
-
-Contains footer navigation links and social media icons.
+Houses contextual navigation nodes, directory links, and social media layout anchors.
 
 ## ⚙️ Installation
 
@@ -106,29 +95,29 @@ Clone the repository:
 git clone <your-repository-url>
 ```
 
-Navigate into the project:
+Navigate into the root project directory:
 
 ```bash
-cd NETFLIX
+cd STREAMHUB
 ```
 
-Install the dependencies:
+Install the project dependencies:
 
 ```bash
 npm install
 ```
 
-Start the development server:
+Start the local development server:
 
 ```bash
 npm run dev
 ```
 
-Open the URL provided by Vite in your browser.
+Open the execution URL provided by Vite inside your browser.
 
 ## 🔐 Environment Variables
 
-Create a `.env` file in the project root and uses your own TMDB API key.
+Create a custom `.env` file in the project root directory and apply your personal TMDB API parameters.
 
 Example:
 
@@ -136,53 +125,44 @@ Example:
 VITE_API_KEY=your_api_key
 ```
 
-
 ## 🛠️ Build for Production
 
-To create a production build:
+To compile an optimized production build run:
 
 ```bash
 npm run build
 ```
 
-The production files will be generated inside the `dist/` folder.
+The production-ready client assets will be compiled directly into the `dist/` folder.
 
-To preview the production build:
+To review the compiled build locally:
 
 ```bash
 npm run preview
 ```
 
-##  Purpose of the Project
+## 🎯 Purpose of the Project
 
-This project was created to practice:
-
-* React JSX
-* Functional components
-* Component reusability
-* Props
-* JavaScript
-* CSS styling
-* CSS Modules
-* Responsive web design
-* Project organization
-* Working with external APIs
-* Building a real-world UI from scratch
+This application was engineered completely from scratch as an educational practice tool to master:
+* React JSX structural workflows
+* Functional component creation and state management
+* Advanced property transmission (Props) and modular reuse
+* Layout composition using pure CSS and modern CSS Modules
+* Client-side responsive web architecture and folder structures
+* Asynchronous handling of open-source third-party API configurations (TMDB)
 
 ## 📸 Preview
 
 ```markdown
-![Home Page Screenshot](./src/assets/image/NetFlix_Screenshot.png)
+![Home Page Screenshot](./src/assets/image/StreamHub_Screenshot.png)
 ```
 
 ## ⚠️ Disclaimer
 
-This project is a **personal educational project** inspired by the Netflix user interface.
-
-It is not affiliated with, sponsored by, or endorsed by Netflix.
+**NON-COMMERCIAL EDUCATIONAL PORTFOLIO PROJECT**  
+This web application is a completely independent, student-led portfolio exercise built strictly for personal learning, development, and coding evaluation purposes. It relies on open-source public APIs and mock interfaces. It does not stream, host, or commercialize any copyrighted entertainment properties, nor is it associated, endorsed, sponsored, or affiliated with any commercial enterprise or real-world streaming entity.
 
 ## Author
 
-**Zelalem Mengistu**
-
-Built with using React and Vite.
+**Zelalem Mengistu**  
+Built with dedication using React and Vite.

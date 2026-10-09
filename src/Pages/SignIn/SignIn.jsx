@@ -59,7 +59,7 @@ function SignIn() {
           Demo sign-in only. Your email is saved in this browser; no password is stored or verified.
         </p>
         <p className={styles.backLink}>
-          New here? <Link to="/">Explore Netflix</Link>
+          New here? <Link to="/">Explore StreamHub</Link>
         </p>
       </section>
     </main>

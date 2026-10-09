@@ -9,7 +9,7 @@ import requests from "../../Utility/MovieRequestingUrl";
 function DisplayRow() {
   const [movies, setMovies] = useState({
     trending: [],
-    netflixOriginals: [],
+    netfOriginals: [],
     topRated: [],
     action: [],
     comedy: [],
@@ -25,7 +25,7 @@ function DisplayRow() {
     try {
       const [
         trendingRes,
-        netflixRes,
+        netfOriginalsRes,
         topRatedRes,
         actionRes,
         comedyRes,
@@ -34,7 +34,7 @@ function DisplayRow() {
         docRes,
       ] = await Promise.all([
         movieInstance.get(requests.fetchTrending),
-        movieInstance.get(requests.fetchNetflixOriginals),
+        movieInstance.get(requests.fetchFeaturedOriginals),
         movieInstance.get(requests.fetchTopRatedMovies),
         movieInstance.get(requests.fetchActionMovies),
         movieInstance.get(requests.fetchComedyMovies),
@@ -44,7 +44,7 @@ function DisplayRow() {
       ]);
       setMovies({
         trending: trendingRes.data.results,
-        netflixOriginals: netflixRes.data.results,
+        netfOriginals: netfOriginalsRes.data.results,
         topRated: topRatedRes.data.results,
         action: actionRes.data.results,
         comedy: comedyRes.data.results,
@@ -60,7 +60,7 @@ function DisplayRow() {
   return (
     <div className={styles.mainWrapper}>
       <SlideShow title="Trending" movies={movies.trending} />
-      <SlideShow title="Popular on NetFlix" movies={movies.netflixOriginals} />
+      <SlideShow title="Popular on StreamHub" movies={movies.netfOriginals} />
       <SlideShow title="Top Rated" movies={movies.topRated} />
       <SlideShow title="Action" movies={movies.action} />
       <SlideShow title="Comedy" movies={movies.comedy} />

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import AuthContext from "./AuthContext";
 
-const STORAGE_KEY = "netflix-demo-user";
+const STORAGE_KEY = "netfl-demo-user";
 
 function AuthProvider({ children }) {
   const [user, setUser] = useState(() => {
